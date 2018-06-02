@@ -176,30 +176,80 @@ get_header();
   <!-- Testimonials -->
   <section class="section grey darken-4">
     <div class="carousel carousel-slider center">
-    <?php
-             $homepageTestimonials = new WP_Query(array(
-            'posts_per_page' => 4,
-            'post_type' => 'testimonial',
-            
-          )); ?>
-           <?php while ($homepageTestimonials->have_posts()) {
-             $homepageTestimonials->the_post(); ?>
       <div class="carousel-item">
         <div class="card medium push-down-card grey darken-4 white-text ">
           <div class="card-content">
             <h5 class="center">Testimonial</h5>
             <div class="container">
               <p>
-                <em> <?php the_content(); ?> 
+                <em>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus harum ullam maiores molestiae blanditiis
+                  rem vero in facere non! Voluptate deserunt, autem eum dolores quae exercitationem eaque rem tempore, minus
+                  maiores quidem doloribus minima repellat labore voluptas! Maxime nemo aspernatur cum dolore facilis. Repudiandae
+                  eligendi dicta dolores, fugiat eaque provident. "
                 </em>
               </p>
-              <?php } wp_reset_postdata(); ?>
               <div class="center">
                 <p class="push-down">John Smith, CEO, Gobal Holdings Ltd</p>
               </div>
             </div>
           </div>
-        
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card medium push-down-card grey darken-4 white-text ">
+          <div class="card-content">
+            <span class="card-title">Testimonial</span>
+            <div class="container">
+              <p>
+                <em>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus harum ullam maiores molestiae blanditiis
+                  rem vero in facere non! Voluptate deserunt, autem eum dolores quae exercitationem eaque rem tempore, minus
+                  maiores quidem doloribus minima repellat labore voluptas! Maxime nemo aspernatur cum dolore facilis. Repudiandae
+                  eligendi dicta dolores, fugiat eaque provident. "
+                </em>
+              </p>
+              <div class="center">
+                <p class="push-down">Ed Glasgow, Marketing Director, Glascorp Ltd</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card medium push-down-card grey darken-4 white-text ">
+          <div class="card-content">
+            <span class="card-title">Testimonial</span>
+            <div class="container">
+              <p>
+                <em>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus harum ullam maiores molestiae blanditiis
+                  rem vero in facere non! Voluptate deserunt, autem eum dolores quae exercitationem eaque rem tempore, minus
+                  maiores quidem doloribus minima repellat labore voluptas! Maxime nemo aspernatur cum dolore facilis. Repudiandae
+                  eligendi dicta dolores, fugiat eaque provident. "
+                </em>
+              </p>
+              <div class="center">
+                <p class="push-down">James Davidson, CEO, Renewable Energy Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card medium push-down-card grey darken-4 white-text ">
+          <div class="card-content">
+            <span class="card-title">Testimonial</span>
+            <div class="container">
+              <p>
+                <em>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus harum ullam maiores molestiae blanditiis
+                  rem vero in facere non! Voluptate deserunt, autem eum dolores quae exercitationem eaque rem tempore, minus
+                  maiores quidem doloribus minima repellat labore voluptas! Maxime nemo aspernatur cum dolore facilis. Repudiandae
+                  eligendi dicta dolores, fugiat eaque provident. "
+                </em>
+              </p>
+              <div class="center">
+                <p class="push-down">Amy Ross, Director, Rules For Schools</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
