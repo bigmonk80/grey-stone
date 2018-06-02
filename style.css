@@ -1,0 +1,65 @@
+/*
+Theme Name: Grey Stone
+Author: Garon Ross
+Version: 1.0
+*/
+
+span i {
+  padding: 10px;
+}
+
+.section-follow .fa-4x {
+  margin: 5px 10px;
+}
+
+.push-down {
+  position: relative;
+  top: 20px;
+}
+
+.push-down-card {
+  position: relative;
+  top: 20px;
+}
+
+em {
+  font-size: 1.2em;
+}
+
+.main-header {
+  /* background: url('img/about.jpg'); */
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  color: #fff;
+}
+
+.svg-img {
+  position: relative;
+  top: 10px;
+  min-height: 96px;
+  min-width: 96px;
+}
+
+@media (min-width: 960px) {
+  .indicator-item {
+    position: relative;
+    bottom: 60px;
+  }
+
+  .svg-img {
+    position: relative;
+    top: 50px;
+    min-height: 96px;
+    min-width: 96px;
+  }
+
+  /* .container {
+    width: 80%;
+  } */
+}
+@media (max-width: 600px) {
+  .main-header {
+    min-height: 200px;
+  }
+}
