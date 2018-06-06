@@ -41,13 +41,13 @@ get_header();
         <div class="col s12">
           <h3>We're a Web Design & Development Agency based in Ripon, North Yorkshire.</h3>
         </div>
+      </div>
         <div class="row">
           <div class="col s12">
             <p class="grey-text text-darken-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, minus, porro vel voluptatibus blanditiis atque
               consequuntur dolorem et quod, soluta nam aperiam. Inventore quis laudantium accusamus sequi deleniti, fugiat
               natus sed quisquam alias aliquid facilis et repellendus doloremque animi libero temporibus sunt nostrum! Officiis
               libero illo voluptate ea quaerat quas?</p>
-          </div>
         </div>
       </div>
   </section>
