@@ -22,21 +22,12 @@
             <li <?php if (is_page('about-us')) echo 'class="active"' ?>>
               <a href="<?php echo esc_url(site_url('/about')) ?>">About Us</a>
             </li>
-            <!-- <li>
-              <a href="#">Our Work</a>
-            </li> -->
             <li <?php if (get_post_type() ==='post') echo 'class="active"' ?>>
               <a href="<?php echo esc_url(site_url('/blog')) ?>">News</a>
             </li>
             <li <?php if (is_page('contact')) echo 'class="active"' ?>>
               <a href="<?php echo esc_url(site_url('/contact')) ?>">Contact</a>
             </li>
-            <!-- <li>
-              <a href="#">Careers</a>
-            </li>
-            <li>
-              <a href="#">Services</a>
-            </li> -->
           </ul>
         </div>
       </div>
@@ -44,27 +35,26 @@
   </div>
   </header>
   
-     <ul class="side-nav" id="mobile-nav">
-      <li>
-        <a href="<?php echo esc_url(site_url('/home')) ?>">Home</a>
-      </li>
-      <li>
-        <a href="<?php echo esc_url(site_url('/about')) ?>">About Us</a>
-      </li>
-      <li>
-        <a href="#">Our Work</a>
-      </li>
-      <li>
-        <a href="<?php echo esc_url(site_url('/blog')) ?>">News</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-      <li>
-        <a href="#">Careers</a>
-      </li>
-      <li>
-        <a href="#">Services</a>
-      </li>
+ 
+    <ul class="side-nav grey darken-4 white-text" id="mobile-nav">
+        <div class="container">
+        <li>
+          <span class="large-font"><a href="<?php echo esc_url(site_url('/home')) ?>" class="white-text">Home</a></span>
+        </li>
+        <div class="divider grey darken-2"></div>
+        <li>
+          <span class="large-font"><a href="<?php echo esc_url(site_url('/about')) ?>" class="white-text">About Us</a></span>
+        </li>
+        <div class="divider grey darken-2"></div>
+        <li>
+          <span class="large-font"><a href="<?php echo esc_url(site_url('/blog')) ?>" class="white-text">News</a></span>
+        </li>
+        <div class="divider grey darken-2"></div>
+        <li>
+          <span class="large-font"><a href="<?php echo esc_url(site_url('/contact')) ?>" class="white-text">Contact</a></span>
+        </li>
+        <div class="divider grey darken-2"></div>
+      </div>
     </ul>
+   
 

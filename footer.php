@@ -45,16 +45,16 @@
           <h5 class="white-text">Links</h5>
           <ul>
             <li>
-              <a class="white-text" href="#home">Home</a>
+              <a class="white-text" href="<?php echo esc_url(site_url('/home')) ?>">Home</a>
             </li>
             <li>
-              <a class="white-text" href="#about">About</a>
+              <a class="white-text" href="<?php echo esc_url(site_url('/about')) ?>">About</a>
             </li>
             <li>
-              <a class="white-text" href="#testimonials">News</a>
+              <a class="white-text" href="<?php echo esc_url(site_url('/blog')) ?>">News</a>
             </li>
             <li>
-              <a class="white-text" href="#contact">Contact</a>
+              <a class="white-text" href="<?php echo esc_url(site_url('/contact')) ?>">Contact</a>
             </li>
           </ul>
         </div>

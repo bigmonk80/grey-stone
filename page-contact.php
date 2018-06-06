@@ -20,7 +20,7 @@ get_header();
   </div>
 </section>
 
-<section class="section grey lighten-2">
+<section class="section blue">
 <div class="container">
       <div class="row">
         <div class="col s12">

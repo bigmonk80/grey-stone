@@ -52,83 +52,47 @@ get_header();
       </div>
   </section>
 
-  <!-- Section: Icon Boxes -->
-  <section id="services" class="section section-icons center grey lighten-2">
+ <!-- Section: Icon Boxes -->
+ <section id="services" class="section section-icons center">
     <div class="container">
       <h3 class="center">Our Services</h3>
       <div class="row">
-        <div class="col s12 m4">
-          <div class="card medium">
-            <span class="card-title">
-              <i class="material-icons medium blue-text text-darken-4">phonelink</i>
+        <div class="col s12 m12 l4">
+            <a class="btn-floating btn-large red"><i class="material-icons">phonelink</i></a>
               <h5 class="grey-text text-darken-4">Web Design</h5>
-            </span>
-            <div class="card-content">
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi maiores officia natus velit incidunt debitis
                 a inventore, nostrum iure itaque!</p>
-            </div>
-          </div>
         </div>
-        <div class="col s12 m4">
-          <div class="card medium">
-            <span class="card-title">
-              <i class="material-icons medium blue-text text-darken-4">keyboard</i>
+        <div class="col s12 m12 l4">
+            <a class="btn-floating btn-large green"><i class="material-icons">keyboard</i></a>
               <h5 class="grey-text text-darken-4">Web Development</h5>
-            </span>
-            <div class="card-content">
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi maiores officia natus velit incidunt debitis
                 a inventore, nostrum iure itaque!</p>
-            </div>
-          </div>
         </div>
-        <div class="col s12 m4">
-          <div class="card medium">
-            <span class="card-title">
-              <i class="material-icons medium blue-text text-darken-4">show_chart</i>
-              <h5 class="grey-text text-darken-4">Search Engine Optimisation</h5>
-            </span>
-            <div class="card-content">
+        <div class="col s12 m12 l4">
+            <a class="btn-floating btn-large blue"><i class="material-icons">show_chart</i></a>
+              <h5 class="grey-text text-darken-4">SEO</h5>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi maiores officia natus velit incidunt debitis
                 a inventore, nostrum iure itaque!</p>
-            </div>
-          </div>
         </div>
       <div class="row">
-        <div class="col s12 m4">
-          <div class="card medium">
-            <span class="card-title">
-              <i class="material-icons medium blue-text text-darken-4">phone_iphone</i>
-              <h5 class="grey-text text-darken-4">Moblie Apps</h5>
-            </span>
-            <div class="card-content">
+      <div class="col s12 m12 l4">
+            <a class="btn-floating btn-large orange"><i class="material-icons">phone_iphone</i></a>
+              <h5 class="grey-text text-darken-4">Mobile Apps</h5>
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi maiores officia natus velit incidunt debitis
                 a inventore, nostrum iure itaque!</p>
-            </div>
-          </div>
         </div>
-        <div class="col s12 m4">
-          <div class="card medium">
-            <span class="card-title">
-              <i class="material-icons medium blue-text text-darken-4">drafts</i>
+        <div class="col s12 m12 l4">
+            <a class="btn-floating btn-large purple"><i class="material-icons">drafts</i></a>
               <h5 class="grey-text text-darken-4">Email Marketing</h5>
-            </span>
-            <div class="card-content">
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi maiores officia natus velit incidunt debitis
                 a inventore, nostrum iure itaque!</p>
-            </div>
-          </div>
         </div>
-        <div class="col s12 m4">
-          <div class="card medium">
-            <span class="card-title">
-              <i class="material-icons medium blue-text text-darken-4">shopping_cart</i>
+        <div class="col s12 m12 l4">
+            <a class="btn-floating btn-large yellow"><i class="material-icons">shopping_cart</i></a>
               <h5 class="grey-text text-darken-4">Ecommerce</h5>
-            </span>
-            <div class="card-content">
               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi maiores officia natus velit incidunt debitis
                 a inventore, nostrum iure itaque!</p>
-            </div>
-          </div>
         </div>
       </div>
       <div class="row">
@@ -165,93 +129,42 @@ get_header();
         </div>
            <?php } wp_reset_postdata(); ?>
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col s12 center">
           <a href="#" class="btn btn-large grey darken-4">See More</a>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="section grey darken-4">
+ <!-- Testimonials -->
+ <section class="section grey darken-4">
+  <?php
+             $homepageTestimonials = new WP_Query(array(
+            'posts_per_page' => 4,
+            'post_type' => 'testimonial',
+            
+          )); ?>
     <div class="carousel carousel-slider center">
+    <?php while ($homepageTestimonials->have_posts()) {
+             $homepageTestimonials->the_post(); ?>
       <div class="carousel-item">
         <div class="card medium push-down-card grey darken-4 white-text ">
           <div class="card-content">
-            <h5 class="center">Testimonial</h5>
+            <h4 class="center">Testimonial</h4>
             <div class="container">
               <p>
-                <em>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus harum ullam maiores molestiae blanditiis
-                  rem vero in facere non! Voluptate deserunt, autem eum dolores quae exercitationem eaque rem tempore, minus
-                  maiores quidem doloribus minima repellat labore voluptas! Maxime nemo aspernatur cum dolore facilis. Repudiandae
-                  eligendi dicta dolores, fugiat eaque provident. "
+                <em><?php the_content();  ?> 
                 </em>
               </p>
               <div class="center">
-                <p class="push-down">John Smith, CEO, Gobal Holdings Ltd</p>
+                <p class="push-down"><?php the_field('testimonial_author'); ?>,  <?php the_field('testimonial_company'); ?> </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <div class="card medium push-down-card grey darken-4 white-text ">
-          <div class="card-content">
-            <span class="card-title">Testimonial</span>
-            <div class="container">
-              <p>
-                <em>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus harum ullam maiores molestiae blanditiis
-                  rem vero in facere non! Voluptate deserunt, autem eum dolores quae exercitationem eaque rem tempore, minus
-                  maiores quidem doloribus minima repellat labore voluptas! Maxime nemo aspernatur cum dolore facilis. Repudiandae
-                  eligendi dicta dolores, fugiat eaque provident. "
-                </em>
-              </p>
-              <div class="center">
-                <p class="push-down">Ed Glasgow, Marketing Director, Glascorp Ltd</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="card medium push-down-card grey darken-4 white-text ">
-          <div class="card-content">
-            <span class="card-title">Testimonial</span>
-            <div class="container">
-              <p>
-                <em>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus harum ullam maiores molestiae blanditiis
-                  rem vero in facere non! Voluptate deserunt, autem eum dolores quae exercitationem eaque rem tempore, minus
-                  maiores quidem doloribus minima repellat labore voluptas! Maxime nemo aspernatur cum dolore facilis. Repudiandae
-                  eligendi dicta dolores, fugiat eaque provident. "
-                </em>
-              </p>
-              <div class="center">
-                <p class="push-down">James Davidson, CEO, Renewable Energy Solutions</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="card medium push-down-card grey darken-4 white-text ">
-          <div class="card-content">
-            <span class="card-title">Testimonial</span>
-            <div class="container">
-              <p>
-                <em>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus harum ullam maiores molestiae blanditiis
-                  rem vero in facere non! Voluptate deserunt, autem eum dolores quae exercitationem eaque rem tempore, minus
-                  maiores quidem doloribus minima repellat labore voluptas! Maxime nemo aspernatur cum dolore facilis. Repudiandae
-                  eligendi dicta dolores, fugiat eaque provident. "
-                </em>
-              </p>
-              <div class="center">
-                <p class="push-down">Amy Ross, Director, Rules For Schools</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <?php } wp_reset_postdata(); ?>
     </div>
   </section>
 
@@ -272,7 +185,7 @@ get_header();
           )); ?>
            <?php while ($homepagePosts->have_posts()) {
          $homepagePosts->the_post(); ?>
-            <div class="col s12 m4">
+            <div class="col s12 m12 l4">
                <div class="card large">
                 <div class="card-image">
                   <?php the_post_thumbnail('medium', ['class' => 'responsive-img']); ?>
